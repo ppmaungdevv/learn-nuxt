@@ -5,7 +5,9 @@
 body {
     @apply bg-green-500
 }
-
+.app{
+    @apply bg-app min-h-screen
+}
 .card {
     @apply bg-gray-300 w-1/3 rounded-md shadow-md
 }

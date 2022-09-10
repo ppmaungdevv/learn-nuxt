@@ -1,11 +1,15 @@
 <template>
-  <div>
-    <Hero />
+  <div class="app">
+      <Nuxt />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+
 }
 </script>
+
+<style>
+
+</style>
