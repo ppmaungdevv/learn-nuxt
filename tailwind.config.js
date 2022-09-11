@@ -6,7 +6,8 @@ module.exports = {
     colors: {
       app: '#211f1f',
       green: colors.green,
-      gray: colors.gray
+      gray: colors.gray,
+      white: colors.white,
     },
     extend: {
     },
