@@ -15,10 +15,11 @@
          <p>{{ top_anime.title_japanese }}</p>
         </div> -->
         <div class="text-white border rounded-md" v-for="top_anime in top_animes">
-          <div class="h-64 rounded-md flex w-full items-end" :style="{ 'background-image': `url(${top_anime.images.jpg.image_url})`, 'background-repeat': 'no-repeat', 'background-position': 'center' }">
-            <div class="group h-1/5 hover:h-2/5 bg-gray-700 w-full">
+          <div class="group h-72 rounded-md flex w-full items-end" :style="{ 'background-image': `url(${top_anime.images.jpg.image_url})`, 'background-repeat': 'no-repeat', 'background-position': 'center' }">
+            <div class="h-1/5 group-hover:h-2/5 bg-gray-700 duration-500 w-full">
               <p class="">{{ top_anime.title }}</p>
               <p class="invisible group-hover:visible">lore</p>
+              <!--  -->
             </div>
           </div>
         </div>
