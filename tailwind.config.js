@@ -4,10 +4,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
+      transparent: 'transparent',
+      white: colors.white,
+      black: colors.black,
       app: '#211f1f',
       green: colors.green,
       gray: colors.gray,
-      white: colors.white,
+      emerald: colors.emerald,
     },
     extend: {
     },
@@ -15,8 +18,16 @@ module.exports = {
   variants: {
     extend: {
       visibility: ["group-hover", "hover"],
-      height: ["group-hover", "hover"]
+      height: ["group-hover", "hover"],
+      overflow: ["group-hover", "hover"],
+      whitespace: ["group-hover"],
+      lineClamp: ["group-hover"],
+      transition: ["group-hover"],
+      opacity: ["group-hover"],
+      // display: ["group-hover", "hover"],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
