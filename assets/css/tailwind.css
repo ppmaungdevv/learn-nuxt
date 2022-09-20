@@ -4,7 +4,7 @@
 
 @layer base{
     body {
-        @apply bg-green-500
+        @apply p-3 bg-app
     }
     h1{
         @apply text-4xl text-center
