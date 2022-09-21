@@ -1,10 +1,14 @@
 <div class="text-white">
     top anime component
     <p v-if="$fetchState.pending" class="text-white">Kuchiyose no Jutsu...</p>
-    <div v-else class="grid grid-flow-row-dense sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4 p-3">        
+    <div v-else class="grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4 p-3">        
         <div v-for="top_anime in top_animes">
             <!-- {{top_anime}} -->
-            <card :tops="top_anime" />
+            <card :tops="top_anime">
+                <!-- <template v-slot:background_image>
+                    <img :src="top_anime.images.jpg.image_url" alt="topImage" class="object-contian w-96 h-full rounded-md">
+                </template> -->
+            </card>
         </div>
     </div>
 </div>
