@@ -11,6 +11,7 @@ module.exports = {
       green: colors.green,
       gray: colors.gray,
       emerald: colors.emerald,
+      red: colors.red,
     },
     extend: {
     },
@@ -25,7 +26,6 @@ module.exports = {
       transition: ["group-hover"],
       opacity: ["group-hover"],
       borderRadius: ["group-hover", "hover"],
-      // rounded: ["group-hover", "hover"]
       // display: ["group-hover", "hover"],
     },
   },
