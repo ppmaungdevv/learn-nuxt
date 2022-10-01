@@ -1,19 +1,17 @@
-const colors = require('tailwindcss/colors')
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./components/**/*.{js,vue,ts,html}",
+    "./layouts/**/*.{vue,html}",
+    "./pages/**/*.{vue,html}",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+  ],
   theme: {
-    colors: {
-      transparent: 'transparent',
-      white: colors.white,
-      black: colors.black,
-      app: '#211f1f',
-      green: colors.green,
-      gray: colors.gray,
-      emerald: colors.emerald,
-      red: colors.red,
-    },
     extend: {
+      colors: {
+        app: '#211f1f',
+      },
     },
   },
   variants: {

@@ -1,4 +1,4 @@
-# learn-nuxt
+# l-nuxt
 
 ## Build Setup
 

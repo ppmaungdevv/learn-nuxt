@@ -8,7 +8,7 @@
     </div> -->
     <p v-if="$fetchState.pending" class="text-white">Kuchiyose no Jutsu...</p>
     <!-- <div v-else class="grid grid-flow-row-dense sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4 p-3"> -->
-    <div class="relative" v-else>
+    <div class=" container mx-auto relative" v-else>
       <TopAnime />
     </div>
   </div>
@@ -33,9 +33,6 @@ export default {
   //   this.fetchCurrencies()
   // },
   methods: {
-    getBgImg(url) {
-      return `bg-[url('${url}')]`
-    },
     async getCurrencies() {
       const { data } = await axios.get(this.api_route)
       const { data: anime } = await axios.get(this.anime_api_route)
