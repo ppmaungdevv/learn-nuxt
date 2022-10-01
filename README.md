@@ -25,9 +25,14 @@ $ npm run generate
 https://docs.api.jikan.moe/
 ```
 
-### Tailwind set up
+### Set up Tailwind css
 ```
 https://tailwindcss.com/docs/guides/nuxtjs
 ```
 Note: 
 - need to add `html` in `content` of `tailwind.config.js`, if using separate html file for vue template
+
+### Set up Fontawesome component
+```
+https://fontawesome.com/docs/web/use-with/vue/use-with
+```
