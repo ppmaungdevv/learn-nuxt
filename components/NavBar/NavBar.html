@@ -19,9 +19,6 @@
                 </div>
             </div>
         </div>
-        <div class="flex items-center px-2">
-            <input class="border p-1 rounded-l w-full" type="text" name="" id="">
-             <button class="py-1 px-2 border-y border-r rounded-r bg-sky-500 shadow border-sky-500 text-white" ><font-awesome-icon class="-scale-x-100" :icon="['fas', 'search']" /></button>
-        </div>
+        <SearchBox v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
     </div>
 </nav>
