@@ -4,7 +4,9 @@
 
 @layer base{
     body {
-        @apply bg-app
+        
+        /* bg-gradient-to-br from-[#292e49] via-[#536976] to-[#bbd2c5] */
+        @apply bg-gradient-to-br from-[#bbd2c5] via-[#536976] to-[#292e49]
     }
     h1{
         @apply text-4xl text-center
@@ -37,7 +39,7 @@
 }
 
 .app{
-    @apply bg-app min-h-screen
+    @apply min-h-screen
 }
 .card {
     @apply bg-gray-300 w-1/3 rounded-md shadow-md

@@ -1,27 +1,62 @@
-<nav class="bg-teal-500 bg-opacity-70 sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between px-1">
-        <div class="px-1 py-2">
-            <h1 class="">Learn Nuxt</h1>
+<nav class="bg-teal-500 bg-opacity-90 md:bg-opacity-70 sticky top-0 z-40 shadow-md">
+    <div class="container mx-auto hidden lg:flex justify-between xl:px-1">
+        <div class="flex items-center px-3 xl:px-1 py-2">
+            <h1 class="hidden xl:block">Learn Nuxt</h1>
+            <h2 class="block xl:hidden">Learn Nuxt</h2>
         </div>
         <div class="flex items-center justify-around w-3/5">
-            <div class="flex w-2/3 justify-around">
-                <div class="px-5 flex items-center">
+            <div class="flex w-2/3 justify-evenly">
+                <div class="px-5 flex items-center font-light">
                     <p class="">
                         Home
                     </p>
                 </div>
-                <div class="px-5 py-4 flex items-center font-semibold text-white border-b-2">
+                <div class="px-5 py-4 flex items-center font-light">
                     <p class="">
                         About
                     </p>
                 </div>
-                <div class="px-5 flex items-center">
+                <div class="px-5 flex items-center font-semibold bg-teal-700 bg-opacity-60 text-white">
                     <p class="">
                         Who am I ?
                     </p>
                 </div>
             </div>
         </div>
-        <SearchBox v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
+        <div class="flex">
+            <SearchBox v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
+        </div>
+    </div>
+    <div class="lg:hidden">
+        <div class="contianer p-2 flex justify-between items-center h-12">
+            <!-- <div class=""> -->
+                <button class="px-1 py-2 text-white">
+                    <font-awesome-icon :icon="['fa-solid', 'fa-bars']" size="xl" />
+                </button>
+                <div class="md:flex hidden">
+                    <SearchBox v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
+                </div>
+            <!-- </div> -->
+        </div>
+        <div class="text-white mt-2">
+            <div class="bg-teal-700 bg-opacity-70 flex flex-row p-2 items-center justify-center font-semibold">
+                <p class="text-center">
+                    Home
+                </p>
+            </div>
+            <div class="flex flex-row p-2 items-center justify-center font-light">
+                <p>
+                    About
+                </p>
+            </div>
+            <div class="flex flex-row p-2 items-center justify-center font-light">
+                <p>
+                    Who am I ?
+                </p>
+            </div>
+            <div class="flex md:hidden flex-row p-2 items-center justify-center">
+                <SearchBox class="w-full" v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
+            </div>
+        </div>
     </div>
 </nav>
