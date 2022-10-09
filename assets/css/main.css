@@ -11,7 +11,7 @@
         @apply bg-gradient-to-br from-[#bbd2c5] via-[#536976] to-[#292e49]
     }
     h1{
-        @apply text-4xl text-center
+        @apply text-4xl text-center font-extrabold
     }
     h2{
         @apply text-2xl text-center
