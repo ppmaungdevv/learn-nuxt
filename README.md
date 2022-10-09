@@ -35,4 +35,6 @@ Note:
 ### Set up Fontawesome component
 ```
 https://fontawesome.com/docs/web/use-with/vue/use-with
+
+https://fontawesome.com/docs/web/use-with/vue/style
 ```

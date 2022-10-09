@@ -29,34 +29,32 @@
     </div>
     <div class="lg:hidden">
         <div class="contianer p-2 flex justify-between items-center h-12">
-            <!-- <div class=""> -->
-                <button class="px-1 py-2 text-white">
-                    <font-awesome-icon :icon="['fa-solid', 'fa-bars']" size="xl" />
-                </button>
-                <div class="md:flex hidden">
-                    <SearchBox v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
-                </div>
-            <!-- </div> -->
+            <button class="px-1 py-2 text-white" @click="show_slider = !show_slider">
+                <font-awesome-icon :icon="['fa-solid', show_slider ? 'fa-xmark' : 'fa-bars']" size="xl" />
+            </button>
+            <div class="md:flex hidden">
+                <SearchBox v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
+            </div>
         </div>
-        <div class="text-white mt-2">
-            <div class="bg-teal-700 bg-opacity-70 flex flex-row p-2 items-center justify-center font-semibold">
-                <p class="text-center">
-                    Home
-                </p>
-            </div>
-            <div class="flex flex-row p-2 items-center justify-center font-light">
-                <p>
-                    About
-                </p>
-            </div>
-            <div class="flex flex-row p-2 items-center justify-center font-light">
-                <p>
-                    Who am I ?
-                </p>
-            </div>
-            <div class="flex md:hidden flex-row p-2 items-center justify-center">
-                <SearchBox class="w-full" v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
-            </div>
+        <div class="text-white overflow-auto transition-all ease-in-out duration-500" :class="show_slider ? 'h-44 md:h-32 mt-2' : 'h-0'">
+                <div class="duration-500 ease-in-out transition-all bg-teal-700 bg-opacity-70 flex flex-row p-2 items-center justify-center font-semibold">
+                    <p class="text-center">
+                        Home
+                    </p>
+                </div>
+                <div class="duration-500 ease-in-out transition-all flex flex-row p-2 items-center justify-center font-light">
+                    <p>
+                        About
+                    </p>
+                </div>
+                <div class="duration-500 ease-in-out transition-all flex flex-row p-2 items-center justify-center font-light">
+                    <p>
+                        Who am I ?
+                    </p>
+                </div>
+                <div class="duration-500 ease-in-out transition-all flex md:hidden flex-row p-2 items-center justify-center">
+                    <SearchBox class="w-full" v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
+                </div>
         </div>
     </div>
 </nav>

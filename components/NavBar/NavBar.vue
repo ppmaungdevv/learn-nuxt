@@ -5,6 +5,7 @@ export default {
     data() {
         return {
             search_data: '',
+            show_slider: false,
         }
     },
     methods: {

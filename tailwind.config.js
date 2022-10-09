@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts,html}",
@@ -12,6 +13,11 @@ module.exports = {
       colors: {
         app: '#211f1f',
       },
+    },
+    fontFamily: {
+      'sans': ['Ubuntu', ...defaultTheme.fontFamily.sans],
+      'serif': ['Ubuntu', ...defaultTheme.fontFamily.serif],
+      'mono': ['Ubuntu', ...defaultTheme.fontFamily.mono]
     },
   },
   variants: {
