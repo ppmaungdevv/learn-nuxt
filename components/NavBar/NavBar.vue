@@ -8,6 +8,9 @@ export default {
             show_slider: false,
         }
     },
+    async fetch() {
+        console.log(this.$route.name)
+    },
     methods: {
         test() {
             console.log(this.search_data)

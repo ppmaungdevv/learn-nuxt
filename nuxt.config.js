@@ -1,6 +1,6 @@
 export default {
   server: {
-    // host: '0' //expose port to local network
+    host: '0' //expose port to local network
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

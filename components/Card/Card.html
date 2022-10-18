@@ -1,8 +1,8 @@
-<div class="transition-all group relative text-white border bg-gray-100 flex flex-col h-64 sm:h-80 lg:h-96 rounded cursor-pointer">
+<div class="transition-all group relative text-white border bg-gray-100 flex flex-col h-64 sm:h-96 lg:h-96 rounded cursor-pointer">
     <div v-if="$slots.background_image" class="z-0 flex w-full items-center justify-center h-full rounded-md">
       <slot name="background_image"></slot>
     </div>
-    <div class="absolute bottom-0 p-2 z-10 h-2/5 sm:h-1/5 group-hover:h-full group-hover:rounded-t-md text-ellipsis overflow-hidden bg-gray-700 bg-opacity-80  duration-500 w-full ease-in-out rounded-b-md">
+    <div class="absolute bottom-0 p-2 z-10 h-1/5 sm:h-1/5 group-hover:h-full group-hover:rounded-t-md text-ellipsis overflow-hidden bg-gray-700 bg-opacity-80  duration-500 w-full ease-in-out rounded-b-md">
       <slot name="title"></slot>
       <div class="invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:transition-all duration-500 ease-in-out my-2">
         <slot class="absolute" name="hover_content"></slot>

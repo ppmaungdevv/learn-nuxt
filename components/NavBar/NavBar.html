@@ -6,20 +6,23 @@
         </div>
         <div class="flex items-center justify-around w-3/5">
             <div class="flex w-2/3 justify-evenly">
-                <div class="px-5 flex items-center font-light">
-                    <p class="">
+                <div class="px-5 flex items-center" :class="$route.name == 'index' ? 'font-semibold bg-teal-700 bg-opacity-90 text-white' : 'font-light' ">
+                    <nuxt-link :to="{name: 'portfolio'}">
                         Home
-                    </p>
+                    </nuxt-link>
                 </div>
                 <div class="px-5 py-4 flex items-center font-light">
                     <p class="">
                         About
                     </p>
                 </div>
-                <div class="px-5 flex items-center font-semibold bg-teal-700 bg-opacity-60 text-white">
-                    <nuxt-link :to="{name: 'portfolio'}">
+                <div class="px-5 flex items-center">
+                    <!-- <nuxt-link :to="{name: 'portfolio'}">
                         Who am I ?
-                    </nuxt-link>
+                    </nuxt-link> -->
+                    <a href="https://ppmaungdevv.github.io/" target="_blank">
+                        Who am I ?
+                    </a>
                 </div>
             </div>
         </div>
@@ -37,7 +40,7 @@
             </div>
         </div>
         <div class="text-white overflow-auto transition-all ease-in-out duration-500" :class="show_slider ? 'h-44 md:h-32 mt-2' : 'h-0'">
-                <div class="duration-500 ease-in-out transition-all bg-teal-700 bg-opacity-70 flex flex-row p-2 items-center justify-center font-semibold">
+                <div class="duration-500 ease-in-out transition-all flex flex-row p-2 items-center justify-center" :class="$route.name == 'index' ? 'font-semibold bg-teal-700 bg-opacity-90' : 'font-light' ">
                     <p class="text-center">
                         Home
                     </p>
@@ -48,9 +51,9 @@
                     </p>
                 </div>
                 <div class="duration-500 ease-in-out transition-all flex flex-row p-2 items-center justify-center font-light">
-                    <p>
+                    <a href="https://ppmaungdevv.github.io/" target="_blank">
                         Who am I ?
-                    </p>
+                    </a>
                 </div>
                 <div class="duration-500 ease-in-out transition-all flex md:hidden flex-row p-2 items-center justify-center">
                     <SearchBox class="w-full" v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />

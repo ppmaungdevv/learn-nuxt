@@ -54,6 +54,7 @@
                 <ul class="list-disc list-inside md:list-outside">
                   <li class="p-1">Node.js/Express</li>
                   <li class="p-1">DynamoDB</li>
+                  <li class="p-1">MySQL</li>
                   <li class="p-1">AWS SDKs</li>
                   <li class="p-1">Laravel</li>
                   <li class="p-1">REST APIs</li>

@@ -8,14 +8,14 @@
                     <img :src="top_anime.images.jpg.image_url" alt="topImage" class="object-contian w-96 h-full rounded-md">
                 </template>
                 <template #title>
-                    <p class="line-clamp-2 group-hover:line-clamp-none text-lg sm:text-xl">{{ top_anime.title }}</p>
+                    <p class="line-clamp-1 group-hover:line-clamp-none text-lg sm:text-xl">{{ top_anime.title }}</p>
                 </template>
                 <template #hover_content>
                     <p class=" text-sm font-light pb-1"  v-if="top_anime.airing"> <small class="text-xs text-emerald-300"> {{ top_anime.status }} </small></p>
                     <p class=" text-sm font-light pb-1"> {{ top_anime.episodes }} episode(s)</p>
                     <p class=" text-sm font-light pb-1"> {{ top_anime.duration }} </p>
                     <p class=" text-sm font-light pb-1"> {{ top_anime.rating }} </p>
-                    <p class="text-sm font-light pb-1">{{ top_anime.aired.string }}</p>
+                    <p class="text-sm font-light pb-1">{{ top_anime.airing ? getDate(top_anime.aired.from) : top_anime.aired.string }}</p>
                     <button class="my-3 btn-emerald-light bottom-0 absolute">Detail</button>
                 </template>
             </card>
