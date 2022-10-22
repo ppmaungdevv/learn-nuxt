@@ -1,13 +1,12 @@
 <template>
-  <div class="app">
-      <NavBar />
-      <Nuxt />
+  <div>
+      <TopAnime />
   </div>
 </template>
 
 <script>
 export default {
-
+    name: 'TopAnimePage'
 }
 </script>
 

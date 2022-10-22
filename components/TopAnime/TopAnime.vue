@@ -5,11 +5,13 @@ import axios from 'axios'
 import { anime_api } from '../../apis/animeAPI'
 import { DateTime } from "luxon";
 export default {
-    name: 'TopAnime',
+    name: 'TopAnimeComponent',
     data() {
         return {
             top_animes: []
         }
+        // ppmgSGhuntjob2312
+        // ppmTHhunt2312
     },
     async fetch() {
         console.log(anime_api)

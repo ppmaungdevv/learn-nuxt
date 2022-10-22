@@ -1,8 +1,10 @@
-<div class="text-white">
-    top anime component
-    <div class="grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4 p-3">        
+<div class="text-white container mx-auto">
+    <!-- top anime component -->
+    <div class="container mx-auto relative"  v-if="$fetchState.pending">
+        <p class="text-white">Kuchiyose no Jutsu<font-awesome-icon :icon="['fa-solid', 'fa-spinner', 'spin']" /></p>
+    </div>
+    <div class="grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4 p-3">
         <div v-for="top_anime in top_animes">
-            <!-- {{top_anime}} -->
             <card :tops="top_anime">
                 <template #background_image>
                     <img :src="top_anime.images.jpg.image_url" alt="topImage" class="object-contian w-96 h-full rounded-md">

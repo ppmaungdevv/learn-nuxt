@@ -6,24 +6,15 @@
         </div>
         <div class="flex items-center justify-around w-3/5">
             <div class="flex w-2/3 justify-evenly">
-                <div class="px-5 flex items-center" :class="$route.name == 'index' ? 'font-semibold bg-teal-700 bg-opacity-90 text-white' : 'font-light' ">
-                    <nuxt-link :to="{name: 'portfolio'}">
-                        Home
-                    </nuxt-link>
-                </div>
-                <div class="px-5 py-4 flex items-center font-light">
-                    <p class="">
-                        About
-                    </p>
-                </div>
-                <div class="px-5 flex items-center">
-                    <!-- <nuxt-link :to="{name: 'portfolio'}">
-                        Who am I ?
-                    </nuxt-link> -->
-                    <a href="https://ppmaungdevv.github.io/" target="_blank">
-                        Who am I ?
-                    </a>
-                </div>
+                <nuxt-link :to="{name: 'index'}" class="px-5 flex items-center cursor-pointer" :class="$route.name == 'index' ? 'active' : 'font-light'">
+                    Home
+                </nuxt-link>
+                <nuxt-link :to="{name: 'about'}" class="px-5 py-4 flex items-center cursor-pointer" :class="$route.name == 'about' ? 'active' : 'font-light'">
+                    About Proj
+                </nuxt-link>
+                <a href="https://ppmaungdevv.github.io/" target="_blank" class="px-5 flex items-center cursor-pointer font-light">
+                    Who am I ?
+                </a>
             </div>
         </div>
         <div class="flex">

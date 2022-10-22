@@ -18,3 +18,8 @@ export default {
     },
 }
 </script>
+<style scoped>
+.active {
+    @apply font-semibold bg-teal-700 bg-opacity-90 text-white
+}
+</style>

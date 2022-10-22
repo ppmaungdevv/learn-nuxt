@@ -1,13 +1,12 @@
 <template>
-  <div class="app">
-      <NavBar />
-      <Nuxt />
+  <div>
+      About
   </div>
 </template>
 
 <script>
 export default {
-
+    name: 'AboutPage',
 }
 </script>
 
