@@ -1,21 +1,55 @@
-<div class="text-white">
-    <div class="container mx-auto bg-red-500">
-        <div class="bg-white p-2">
-            <h2 class="text-left text-black ml-3 border-l-8 border-green-500 pl-1">Latest</h2>
-            <div class="grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-3">
-                <Card v-for='i in 5' :key="i"></Card>
+<div>
+    <Loading class="w-full" v-if="$fetchState.pending" />
+
+    <div class="text-white mt-2" v-else>
+        <div class="container mx-auto">
+            <div class="md:p-2">
+                <h2 class="heading">Currently Airing</h2>
+                <div class="content">
+                    <Card v-for='airing_anime in currently_airing_animes' :key="airing_anime.mal_id">
+                        <template #background_image>
+                            <img :src="airing_anime.images.jpg.image_url" alt="topImage" class="object-contian w-96 h-full rounded-md">
+                        </template>
+                        <template #title>
+                            <p class="line-clamp-1 group-hover:line-clamp-none text-lg sm:text-xl">{{ airing_anime.title }}</p>
+                        </template>
+                        <template #hover_content>
+                            <p class=" text-sm font-light pb-1"  v-if="airing_anime.airing"> <small class="text-xs text-emerald-300"> {{ airing_anime.status }} </small></p>
+                            <p class=" text-sm font-light pb-1"> {{ airing_anime.episodes }} episode(s)</p>
+                            <p class=" text-sm font-light pb-1"> {{ airing_anime.duration }} </p>
+                            <p class=" text-sm font-light pb-1"> {{ airing_anime.rating }} </p>
+                            <p class="text-sm font-light pb-1">{{ airing_anime.airing ? getDate(airing_anime.aired.from) : airing_anime.aired.string }}</p>
+                            <button class="my-3 btn-emerald-light bottom-0 absolute">Detail</button>
+                        </template>
+                    </Card>
+                </div>
+                <div class="footer">
+                    <button class="my-3 btn-emerald-light">See More...</button>
+                </div>
             </div>
-            <div class="bg-blue-500 flex justify-end px-3">
-                <button class="my-3 btn-emerald-light">See All...</button>
-            </div>
-        </div>
-        <div class="bg-white p-2">
-            <h2 class="text-left text-black ml-3 border-l-8 border-green-500 pl-1">Top Anime</h2>
-            <div class="grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-3">
-                <Card v-for='i in 5' :key="i"></Card>
-            </div>
-            <div class="bg-blue-500 flex justify-end px-3">
-                <nuxt-link class="my-3 btn-emerald-light" :to="{name: 'topanime'}">See All...</nuxt-link>
+            <div class="md:p-2">
+                <h2 class="heading">Top Anime</h2>
+                <div class="content">
+                    <Card v-for='top_anime in top_animes' :key="top_anime.mal_id">
+                        <template #background_image>
+                            <img :src="top_anime.images.jpg.image_url" alt="topImage" class="object-contian w-96 h-full rounded-md">
+                        </template>
+                        <template #title>
+                            <p class="line-clamp-1 group-hover:line-clamp-none text-lg sm:text-xl">{{ top_anime.title }}</p>
+                        </template>
+                        <template #hover_content>
+                            <p class=" text-sm font-light pb-1"  v-if="top_anime.airing"> <small class="text-xs text-emerald-300"> {{ top_anime.status }} </small></p>
+                            <p class=" text-sm font-light pb-1"> {{ top_anime.episodes }} episode(s)</p>
+                            <p class=" text-sm font-light pb-1"> {{ top_anime.duration }} </p>
+                            <p class=" text-sm font-light pb-1"> {{ top_anime.rating }} </p>
+                            <p class="text-sm font-light pb-1">{{ top_anime.airing ? getDate(top_anime.aired.from) : top_anime.aired.string }}</p>
+                            <button class="my-3 btn-emerald-light bottom-0 absolute">Detail</button>
+                        </template>
+                    </Card>
+                </div>
+                <div class="footer">
+                    <nuxt-link class="my-3 btn-emerald-light" :to="{name: 'topanime'}">See All...</nuxt-link>
+                </div>
             </div>
         </div>
     </div>

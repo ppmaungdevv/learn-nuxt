@@ -9,9 +9,7 @@
 
     <Loading class="w-full" v-if="$fetchState.pending" />
 
-    <div class="container mx-auto relative" v-else>
-      <Home />
-    </div>
+    <Home  v-else />
   </div>
 </template>
 
@@ -28,7 +26,7 @@ export default {
     }
   },
   async fetch() {
-    await this.getCurrencies()
+    // await this.getCurrencies()
   },
   // mounted(){ 
   //   this.fetchCurrencies()
