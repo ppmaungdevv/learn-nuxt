@@ -6,12 +6,10 @@
     <!-- <div class="text-white" v-for="(currency, index) in currencies">
       <span class="mr-5">{{index}}: </span>{{ currency }}
     </div> -->
-    <div class="container mx-auto relative"  v-if="$fetchState.pending">
-      <p class="text-white">Kuchiyose no Jutsu...</p>
-    </div>
-    <!-- <div v-else class="grid grid-flow-row-dense sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4 p-3"> -->
+
+    <Loading class="w-full" v-if="$fetchState.pending" />
+
     <div class="container mx-auto relative" v-else>
-      <!-- <TopAnime /> -->
       <Home />
     </div>
   </div>
