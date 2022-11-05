@@ -10,11 +10,15 @@ export default {
         return {
             top_animes: []
         }
-        // ppmgSGhuntjob2312
-        // ppmTHhunt2312
+    },
+    activated() {
+      // Call fetch again if last fetch more than 30 sec ago
+      if (this.$fetchState.timestamp <= Date.now() - 30000) {
+        this.$fetch()
+      }
     },
     async fetch() {
-        console.log(anime_api)
+        await new Promise(resolve => setTimeout(resolve, 3000));
         await this.getTopAnimes();
     },
     methods: {
@@ -34,6 +38,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.heading {
+    @apply bg-teal-200/20 text-left text-white border-l-8 border-green-500 pl-1 py-2 shadow-lg
+}
 </style>

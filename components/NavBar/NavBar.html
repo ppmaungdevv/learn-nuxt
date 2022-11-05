@@ -6,10 +6,11 @@
         </div>
         <div class="flex items-center justify-around w-3/5">
             <div class="flex w-2/3 justify-evenly">
-                <nuxt-link :to="{name: 'index'}" class="px-5 flex items-center cursor-pointer" :class="$route.name == 'index' ? 'active' : 'font-light'">
+                <nuxt-link :active="$route.name == 'index'" :to="{name: 'index'}" class="px-5 flex items-center cursor-pointer font-light" @click="test">
                     Home
                 </nuxt-link>
-                <nuxt-link :to="{name: 'about'}" class="px-5 py-4 flex items-center cursor-pointer" :class="$route.name == 'about' ? 'active' : 'font-light'">
+                <nuxt-link :active="$route.name == 'about'" :to="{name: 'about'}" class="px-5 py-4 flex items-center cursor-pointer font-light" >
+                    <!-- :class="$route.name == 'about' ? 'active' : 'font-light'" -->
                     About Proj
                 </nuxt-link>
                 <a href="https://ppmaungdevv.github.io/" target="_blank" class="px-5 flex items-center cursor-pointer font-light">
@@ -31,21 +32,17 @@
             </div>
         </div>
         <div class="text-white overflow-auto transition-all ease-in-out duration-500" :class="show_slider ? 'h-44 md:h-32 mt-2' : 'h-0'">
-                <div class="duration-500 ease-in-out transition-all flex flex-row p-2 items-center justify-center" :class="$route.name == 'index' ? 'font-semibold bg-teal-700 bg-opacity-90' : 'font-light' ">
-                    <p class="text-center">
-                        Home
-                    </p>
+                <div class="mobile-nav-item" :class="$route.name == 'index' ? 'mobile-nav-item-active' : 'font-light' " @click="goto('index')">
+                    Home
                 </div>
-                <div class="duration-500 ease-in-out transition-all flex flex-row p-2 items-center justify-center font-light">
-                    <p>
-                        About
-                    </p>
+                <div class="mobile-nav-item" :class="$route.name == 'about' ? 'mobile-nav-item-active' : 'font-light' " @click="goto('about')">
+                    About
                 </div>
-                <div class="duration-500 ease-in-out transition-all flex flex-row p-2 items-center justify-center font-light">
-                    <a href="https://ppmaungdevv.github.io/" target="_blank">
+                <a href="https://ppmaungdevv.github.io/" target="_blank">
+                    <div class="mobile-nav-item font-light">
                         Who am I ?
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div class="duration-500 ease-in-out transition-all flex md:hidden flex-row p-2 items-center justify-center">
                     <SearchBox class="w-full" v-model="search_data" @input="test" @pressEnter="test" @btnClicked="test" />
                 </div>
