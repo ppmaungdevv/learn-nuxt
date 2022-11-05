@@ -25,7 +25,7 @@
     </div>
     <div class="lg:hidden">
         <div class="contianer flex justify-between items-center h-12">
-            <button class="px-2 py-2 h-full text-white" @click="toggleSlider">
+            <button class="px-2 py-2 h-full text-white" @click="show_slider = !show_slider">
                 <font-awesome-icon :icon="['fa-solid', show_slider ? 'fa-xmark' : 'fa-bars']" size="xl" />
             </button>
             <div class="md:flex hidden">

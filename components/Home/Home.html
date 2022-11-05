@@ -17,7 +17,7 @@
                         <p class=" text-sm font-light pb-1"> {{ airing_anime.duration }} </p>
                         <p class=" text-sm font-light pb-1"> {{ airing_anime.rating }} </p>
                         <p class="text-sm font-light pb-1">{{ airing_anime.airing ? getDate(airing_anime.aired.from) : airing_anime.aired.string }}</p>
-                        <button class="my-3 btn-emerald-light bottom-0 absolute">Detail</button>
+                        <nuxt-link :to="{name: 'id-detail', params: {id: airing_anime.mal_id}}" class="my-3 btn-emerald-light bottom-0 absolute">Detail</nuxt-link>
                     </template>
                 </Card>
             </div>
@@ -41,7 +41,7 @@
                         <p class=" text-sm font-light pb-1"> {{ top_anime.duration }} </p>
                         <p class=" text-sm font-light pb-1"> {{ top_anime.rating }} </p>
                         <p class="text-sm font-light pb-1">{{ top_anime.airing ? getDate(top_anime.aired.from) : top_anime.aired.string }}</p>
-                        <button class="my-3 btn-emerald-light bottom-0 absolute">Detail</button>
+                        <nuxt-link :to="{name: 'id-detail', params: {id: top_anime.mal_id}}" class="my-3 btn-emerald-light bottom-0 absolute">Detail</nuxt-link>
                     </template>
                 </Card>
             </div>
