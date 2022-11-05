@@ -8,7 +8,8 @@
     body {
         
         /* bg-gradient-to-br from-[#292e49] via-[#536976] to-[#bbd2c5] */
-        @apply bg-gradient-to-br from-[#bbd2c5] via-[#536976] to-[#292e49]
+        /* bg-gradient-to-br from-[#6abab6] to-[#adeadc] */
+        @apply bg-gradient-to-br to-[#bbd2c5] via-[#536976] from-[#292e49]
     }
     h1{
         @apply text-4xl text-center font-extrabold
@@ -37,6 +38,9 @@
 
     .btn-emerald-outline {
         @apply text-emerald-300 hover:text-white hover:bg-emerald-600 hover:border-emerald-600 border-emerald-300 border py-1 px-5 rounded-md duration-300
+    }
+    .btn-teal {
+        @apply bg-teal-700 text-white border border-teal-600 py-1 px-5 font-medium rounded-md duration-300
     }
 }
 

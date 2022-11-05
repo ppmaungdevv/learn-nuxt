@@ -25,7 +25,7 @@ export default {
 </script>
 <style scoped>
 a.nuxt-link-exact-active {
-    @apply font-semibold bg-teal-700 bg-opacity-90 text-white
+    @apply font-semibold bg-slate-600 bg-opacity-90 text-white
 }
 .active {
     @apply font-semibold bg-teal-700 bg-opacity-90 text-white
@@ -34,6 +34,6 @@ a.nuxt-link-exact-active {
     @apply duration-500 ease-in-out transition-all flex flex-row p-2 items-center justify-center
 }
 .mobile-nav-item-active {
-    @apply font-semibold bg-teal-700 bg-opacity-90
+    @apply font-semibold bg-slate-700 bg-opacity-90
 }
 </style>

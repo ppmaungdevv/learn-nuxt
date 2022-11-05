@@ -1,4 +1,5 @@
-<nav class="bg-teal-500 bg-opacity-90 md:bg-opacity-70 sticky top-0 z-40 shadow-md">
+<!-- <nav class="bg-teal-500 bg-opacity-90 md:bg-opacity-70 sticky top-0 z-40 shadow-md text-white"> -->
+<nav class="bg-slate-500 bg-opacity-90 md:bg-opacity-70 sticky top-0 z-40 shadow-md text-white">
     <div class="container mx-auto hidden lg:flex justify-between xl:px-1">
         <div class="flex items-center px-3 xl:px-1 py-2">
             <h1 class="hidden xl:block">Learn Nuxt</h1>
@@ -23,8 +24,8 @@
         </div>
     </div>
     <div class="lg:hidden">
-        <div class="contianer p-2 flex justify-between items-center h-12">
-            <button class="px-1 py-2 text-white" @click="show_slider = !show_slider">
+        <div class="contianer flex justify-between items-center h-12">
+            <button class="px-2 py-2 h-full text-white" @click="toggleSlider">
                 <font-awesome-icon :icon="['fa-solid', show_slider ? 'fa-xmark' : 'fa-bars']" size="xl" />
             </button>
             <div class="md:flex hidden">
