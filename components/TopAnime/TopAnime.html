@@ -2,6 +2,7 @@
     <!-- top anime component -->
     <Loading v-if="$fetchState.pending" />
     <div class="text-white container mx-auto px-3" v-else>
+        <button @click="$router.back()">back</button>
         <h2 class="heading mt-2">Top Anime</h2>
         <div class="grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4 p-3">
             <div v-for="top_anime in top_animes">
@@ -13,12 +14,12 @@
                         <p class="line-clamp-1 group-hover:line-clamp-none text-lg sm:text-xl">{{ top_anime.title }}</p>
                     </template>
                     <template #hover_content>
-                        <p class=" text-sm font-light pb-1"  v-if="top_anime.airing"> <small class="text-xs text-emerald-300"> {{ top_anime.status }} </small></p>
+                        <p class=" text-sm font-light pb-1" v-if="top_anime.airing"> <small class="text-xs text-emerald-300"> {{ top_anime.status }} </small></p>
                         <p class=" text-sm font-light pb-1"> {{ top_anime.episodes }} episode(s)</p>
                         <p class=" text-sm font-light pb-1"> {{ top_anime.duration }} </p>
                         <p class=" text-sm font-light pb-1"> {{ top_anime.rating }} </p>
                         <p class="text-sm font-light pb-1">{{ top_anime.airing ? getDate(top_anime.aired.from) : top_anime.aired.string }}</p>
-                        <button class="my-3 btn-emerald-light bottom-0 absolute">Detail</button>
+                        <nuxt-link :to="{name: 'id-detail', params: {id: top_anime.mal_id}}" class="my-3 btn-emerald-light bottom-0 absolute">Detail</nuxt-link>
                     </template>
                 </card>
             </div>
