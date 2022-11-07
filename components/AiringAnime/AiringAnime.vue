@@ -7,16 +7,16 @@ export default {
     name: 'AiringAnimeComponent',
     data() {
         return {
-            
+            airing_animes: []
         }
     },
     async fetch() {
-
+        await this.getAiringAnimeData()
     },
     methods: {
         async getAiringAnimeData() {
             const { data } = await axios.get(`${anime_api.top}?filter=airing`)
-            // this.top_animes = data.data.map(ele => ele)
+            this.airing_animes = data.data.map(ele => ele)
             console.log('this.airing', data)
         }
     },
@@ -24,5 +24,7 @@ export default {
 </script>
 
 <style>
-
+.heading {
+    @apply bg-teal-200/20 text-left text-white border-l-8 border-green-500 pl-1 py-2 shadow-lg
+}
 </style>
